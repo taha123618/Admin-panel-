@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Admin panel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+      integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="bg-right">
+    <div class="container-fluid mt-5">
+      <div class="row">
+        <!-- left or right ma se space de ke center ma krne ke lye -->
+        <div class="col-md-10 col-11 mx-auto">
+          <nav aria-label="breadcrumb " class="mb-3">
+            <ol class="breadcrumb bg-common">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">User</a></li>
+              <li class="breadcrumb-item active" aria-current="page">
+                ProfileSettings
+              </li>
+            </ol>
+          </nav>
+
+          <!-- left side div banner -->
+          <div class="row">
+            <!-- left side div banner -->
+            <div class="col-lg-3 col-md-4 d-md-block">
+              <div class="card bg-common card-left">
+                <div class="card-body">
+                  <nav class="nav d-md-block d-none">
+                    <a data-toggle="tab" class="nav-link" href="#profile">
+                      <i class="fas fa-user m-2"></i>Profile</a
+                    >
+                    <a
+                      data-toggle="tab"
+                      class="nav-link"
+                      href="#AccountSetting"
+                    >
+                      <i class="fas fa-user-cog m-2"></i>Account Setting</a
+                    >
+                    <a data-toggle="tab" class="nav-link" href="#Security">
+                      <i class="fas fa-user-shield m-2"></i>Security</a
+                    >
+                    <a data-toggle="tab" class="nav-link" href="#Notification">
+                      <i class="fas fa-bell m-2"></i>Notification</a
+                    >
+                    <a data-toggle="tab" class="nav-link" href="#Billing">
+                      <i class="fas fa-money-check-alt m-2"></i>Billing</a
+                    >
+                  </nav>
+                </div>
+              </div>
+            </div>
+            <!-- left side div banner End -->
+
+            <!-- right side div imp  For Mobile-->
+            <div class="col-lg-9 col-md-8">
+              <!-- For mobile responsive -->
+              <div class="card">
+                <div class="card-header border-bottom mb-3 d-md-none">
+                  <!-- tabs -->
+                  <ul class="nav nav-tabs card-header-tabs nav-fill">
+                    <li class="nav-item">
+                      <a
+                        data-toggle="tab"
+                        class="nav-link active"
+                        aria-current="page"
+                        href="#profile"
+                      >
+                        <i class="fas fa-user m-2"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item">
+                      <a data-toggle="tab" class="nav-link" href="#account ">
+                        <i class="fas fa-user-cog m-2"></i>
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a data-toggle="tab" class="nav-link" href="#security">
+                        <i class="fas fa-user-shield m-2"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item">
+                      <a
+                        data-toggle="tab"
+                        class="nav-link"
+                        href="#notification"
+                      >
+                        <i class="fas fa-bell m-2"></i
+                      ></a>
+                    </li>
+                    <li class="nav-item">
+                      <a data-toggle="tab" class="nav-link" href="#billing">
+                        <i class="fas fa-money-check-alt m-2"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- User profile Start  -->
+                <div class="card-body tab-content border-0">
+                  <!-- Actual profile Data  -->
+                  <div class="tab-pane active" id="Profile">
+                    <h6>Your Information</h6>
+                    <hr />
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >First name</label
+                        >
+                        <input
+                          type="name"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="First name"
+                        />
+                        <small class="form-text text-muted"
+                          >Plz Enter Your Full Name</small
+                        >
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >last name</label
+                        >
+                        <input
+                          type="name"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="last name"
+                        />
+                        <small class="form-text text-muted"
+                          >Plz Enter Your Full Name</small
+                        >
+                      </div>
+
+                      <div class="mb-3">
+                        <div class="col">
+                          <label>Your Profile Picture</label>
+                          <input
+                            class="form-control"
+                            type="file"
+                            id="formFile"
+                          />
+                          <small class="form-text text-muted"
+                            >Profile Picture Must be in under 5MB.</small
+                          >
+                        </div>
+                      </div>
+
+                      <select
+                        class="form-select"
+                        aria-label="Default select example">
+                      
+                        <option selected>Location</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+
+                      <div class="form-group form-text text-muted small">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing
+                        elit. Natus voluptas amet et animi inventore quos,
+                        suscipit quis recusandae nulla vero?
+                      </div>
+                      <br />
+                      <button class="btn btn-outline-info" type="button">
+                        Update profile
+                      </button>
+                      <button class="btn btn-outline-success" type="reser">
+                        reset profile
+                      </button>
+                    </form>
+                  </div>
+                  <!-- User profile End -->
+
+                  <!-- User Account Start  -->
+                  <div class="tab-pane" id="Account">
+                    <h6>Account Setting</h6>
+                    <hr />
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >User name</label
+                        >
+                        <input
+                          type="name"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder="User name"
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label
+                          for="exampleFormControlInput1"
+                          class="form-label text-danger"
+                          >Deleted name</label
+                        >
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Alias, maxime.
+                      </div>
+                      <br />
+                      <button class="btn btn-danger" type="button">
+                        Activited
+                      </button>
+                    </form>
+                  </div>
+
+                  <!-- User Account End  -->
+
+                  <!-- User Security Start  -->
+                  <div class="tab-pane" id="Security">
+                    <h6>Security Setting</h6>
+                    <hr />
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder=""
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder=""
+                        />
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >password</label
+                        >
+                        <input
+                          type="password"
+                          class="form-control"
+                          id="exampleFormControlInput1"
+                          placeholder=""
+                        />
+                      </div>
+                    </form>
+
+                    <hr />
+
+                    <form>
+                      <div class="form-group">
+                        <label class="d-block mb-2"
+                          >Two factor Authentication</label
+                        >
+                        <button class="btn btn-outline-info" type="button">
+                          Enabled Account
+                        </button>
+                        <p class="text-muted small">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Veniam, ipsa?
+                        </p>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- User Security End  -->
+
+                  <!-- User notification Start  -->
+                  <div class="tab-pane" id="Notification">
+                    <h6>Notification</h6>
+                    <hr />
+                    <form>
+                      <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label"
+                          >Notification</label
+                        >
+                        <br />
+                        <small class="form-text text-muted"
+                          >Notification is here</small
+                        >
+                      </div>
+
+                      <div class="form-check mt-3">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexCheckChecked">
+                          E-mail
+                        </label>
+                      </div>
+
+                      <div class="form-check">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value=""
+                          id="flexCheckChecked"
+                          checked
+                        />
+                        <label class="form-check-label" for="flexCheckChecked">
+                          Checked checkbox
+                        </label>
+                      </div>
+
+                      <!-- sms notification -->
+                      <div class="mb-3">
+                        <label class="d-block mb-2"> sms Notification</label>
+                        <ul class="list-group">
+                          <li class="list-group-item">
+                            comments
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexSwitchCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexSwitchCheckChecked"
+                                >Checked switch checkbox input</label
+                              >
+                            </div>
+
+                            Error
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexSwitchCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexSwitchCheckChecked"
+                                >Checked switch checkbox input</label
+                              >
+                            </div>
+
+                            switch
+                            <div class="form-check form-switch">
+                              <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="flexSwitchCheckChecked"
+                                checked
+                              />
+                              <label
+                                class="form-check-label"
+                                for="flexSwitchCheckChecked"
+                                >Checked switch checkbox input</label
+                              >
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- User notification End  -->
+
+                  <!-- User Billing Start -->
+                  <div class="tab-pane" id="Billing">
+                    <h6>Billing</h6>
+                    <hr />
+                    <form>
+                      <div class="mb-3">
+                        <label class="d-block">Payment Method</label>
+                        <small class="form-text text-muted"
+                          >not Payed any Payments</small
+                        >
+                        <br />
+                        <button class="btn btn-outline-info" type="button">
+                          Payment Method
+                        </button>
+                      </div>
+
+                      <div class="mb-3">
+                        <label class="d-block">Payment histroy</label>
+                        <div class="border p-3 text-center">
+                          not Payed any Payments
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <!-- User Billing End -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
